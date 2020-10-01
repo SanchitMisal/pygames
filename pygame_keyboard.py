@@ -20,15 +20,15 @@ def check_inputs(events):
                 if(event.key== K_ESCAPE):
                     myquit()
                 elif event.key==K_LEFT:
-                    catx-=5
+                    catx-=10
                     print("Move rect left")
                 elif event.key==K_RIGHT:
-                    catx+=5
+                    catx+=10
                     print("Move rect right")
                 else:
                     print(event.key)
-    screen.fill((0,0,0))
-    pygame.draw.rect(screen,(255,255,255),(catx,50,50,10))
+    screen.fill((0,0,0,220))
+    pygame.draw.rect(screen,(255,255,255,0),(catx,50,50,10,0))
     pygame.display.update()
 
 def main():
